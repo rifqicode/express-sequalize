@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var hash = require('pbkdf2-password')()
+const User = require('../models').User;
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -39,6 +40,13 @@ router.post('/', function (req, res, next) {
     });
 
   });
+});
+
+router.post('/register', async (req, res, next) => {
+    res.json(req.body);
+    // let create = await User.create(req.body);
+
+    // res.json(create);
 });
 
 
