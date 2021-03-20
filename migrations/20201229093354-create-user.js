@@ -7,11 +7,11 @@ module.exports = {
         type: Sequelize.UUID,
         defaultValue: Sequelize.literal('uuid_generate_v4()'),
       },
-      name: {
+      username: {
         type: Sequelize.STRING,
         defaultValue: 'test',
       },
-      description: {
+      password: {
         type: Sequelize.TEXT
       },
       image: {
